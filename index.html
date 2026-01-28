@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Orientation Pro</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar panel">
+      <div class="sideTop">
+        <h1>Profil en temps réel</h1>
+        <p>Les jauges se mettent à jour pendant le questionnaire.</p>
+        <div class="pillRow">
+          <span class="pill" id="stepPill">Écran 1</span>
+          <span class="pill" id="answeredPill">0 réponses</span>
+          <span class="pill" id="skippedPill">0 passées</span>
+          <span class="pill" id="progressPill">0%</span>
+        </div>
+      </div>
+      <div class="sideBody" id="statsBody"></div>
+    </aside>
+
+    <main class="panel">
+      <header class="cardHead">
+        <div class="title">Recommandation d’activité professionnelle</div>
+        <div class="desc">3 questions max par écran. Chaque question peut être passée.</div>
+      </header>
+      <section class="content" id="mainContent">
+        <div class="loading">Chargement…</div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal -->
+  <div class="modalOverlay" id="modalOverlay" aria-modal="true" role="dialog">
+    <div class="modal">
+      <div class="modalHeader">
+        <div>
+          <div class="hTitle" id="modalTitle">Détail</div>
+          <div class="hSub" id="modalSub">—</div>
+        </div>
+        <button class="closeBtn" id="closeModalBtn">Fermer</button>
+      </div>
+      <div class="modalBody" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
